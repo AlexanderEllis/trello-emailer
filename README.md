@@ -66,7 +66,7 @@ The script accesses all cards in the 2nd list ("In Progress") in emailer.py, and
 You can run the program by the following:
 
 ```
-python emailer.py
+python emailer/emailer.py
 ```
 
 Here is the sample email using the example above:
