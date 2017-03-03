@@ -81,6 +81,15 @@ Goal C
         Item 3
 ```
 
+I added a crontab that will run emailer.py every morning at 8:00 AM.  
+
+```
+
+PATH=/usr/local/bin/
+
+0 8 * * * python3 /PATH/TO/emailer/emailer.py
+```
+
 ## License
 
 This project is licensed under the MIT License
