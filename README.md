@@ -7,7 +7,7 @@ This is a simple Python script that sends an email with the first incomplete ite
 
 ### Prerequisites
 
-I chose to use [Py-Trello](https://github.com/sarumont/py-trello) instead of the [Trello](https://pypi.python.org/pypi/trello) for Python 3+.
+I chose to use [py-trello](https://github.com/sarumont/py-trello) instead of [trello](https://pypi.python.org/pypi/trello) for Python 3+.
 
 This script uses Gmail by SMTP, which requires access to Gmail.  Gmail restricts regular username/password access to SMTP as a "Less secure app," and I've found two ways to work around this:
 * Allowing access to less secure apps
@@ -35,7 +35,7 @@ Once those session variables are set, run the following to get your token and to
 python ./trello/util.py
 ```
 
-Create a config.py file that includes your API information, Trello board ids, and email information.  It's included in the .gitignore. It should look like the following:
+Create a user_config.py file that includes your API information, Trello board ids, and email information.  It's included in the .gitignore. It should look like the following:
 
 ```
 TRELLO_API_INFO = {
