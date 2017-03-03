@@ -18,10 +18,15 @@ def send_email(message):
     ])
     username = EMAIL_INFO['address']
     password = EMAIL_INFO['password']
-    server = smtplib.SMTP('smtp.gmail.com:587')
-    server.ehlo()
-    server.starttls()
-    server.login(username, password)
-    server.sendmail(fromaddr, toaddrs, msg)
-    server.quit()
-
+    try:
+        server = smtplib.SMTP('smtp.gmail.com:587')
+        server.ehlo()
+        server.starttls()
+        server.login(username, password)
+        server.sendmail(fromaddr, toaddrs, msg)
+        server.quit()
+        return True
+    except Exception as inst:
+        print(inst)
+        server.quit()
+        return False

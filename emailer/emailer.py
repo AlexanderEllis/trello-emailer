@@ -11,6 +11,7 @@ def analyze_boards(board_list, trello_client, email_body):
     for board in board_list:
         board_obj = trello_client.get_board(board)
         cards = board_obj.open_lists()[1].list_cards()
+        # This is where I assume the 2nd card is "In Progress" and the one I want to analyze
 
         for card in cards:
             email_body.append(card.name)

@@ -23,6 +23,10 @@ Install py-trello
 ```
 pip install py-trello
 ```
+Install pytest for testing
+```
+pip install pytest
+```
 Set the following session variables from your [Trello API credentials](https://trello.com/1/appKey/generate)
 
 * TRELLO_API_KEY
